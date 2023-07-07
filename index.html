@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Continentes</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 
 <div class="container">
     <div class="f-group">
-        <label for="">Country</label>
-        <select vlaue="" id="slct1">
+        <label for="">Continente</label>
+        <select name="slct1" id="slct1" onchange="continents(this.id, 'slct1')">
             <option value=""> --  Elige un Continente --</option>
             <option value="america">América</option>
             <option value="asia">Asía</option>
@@ -20,7 +21,31 @@
             <option value="africa">África</option>
         </select>
     </div>
+    <div class="f-group">
+        <label for="">País</label>
+        <select name="slct2" id="slct2"></select>
+    </div>
 </div>
+
+    <script>
+
+        function continents(s1, s2){
+            var s1 = document.getElementById("slct1");
+            var s2 = document.getElementById("slct2");
+
+            s2.innerHTML = "Argentina", "México", "Estados Unidos";
+
+            if(s1.value == "america"){
+                alert(s1.value);
+
+                var optionArray = [''];
+
+            }
+        }
+
+
+        
+    </script>
 
 
 </body>
